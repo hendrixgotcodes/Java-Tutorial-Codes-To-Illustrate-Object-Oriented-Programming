@@ -23,9 +23,11 @@ public class Classes {
                             System.out.println("Making Deposit ?");
                             String answer = scanner.next();
                             one.deposit(answer);
+                            one.WriteDepositToFile;
 
                             System.out.println("Would You like to take some money?");
                             answer = scanner.next();
                             one.withdrawFunds(answer);
+                            one.WriteDepositToFile;
             }
 }
