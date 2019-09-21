@@ -128,5 +128,23 @@ public class BankAccount {
                  else System.out.println("Please Enter Yes or NO")
                         ;
         }
+        public void WriteDepositTofile(){
+                
+                String filename = "BalanceDetails.txt";
+                
+                try{
+                PrintWriter outputstream = new PrintWriter(filename);
+                outputstream.println("Customer name: " + this.customerfirstname + " " + this.customersecondname );
+                outputstream.println("");
+                outputstream.println("Account number: " + this.accountnumber);
+                outputstream.println("");
+                outputstream.println("Total Balance remaining: Ghc " + this.balance);
+                outputstream.close();
+                System.out.println("New Balance Saved");
+                   }catch(FileNotFoundException e){
+                        e.printStackTrace();
+                        }
+                
+                }
 
 }
