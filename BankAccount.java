@@ -126,7 +126,7 @@ public class BankAccount {
                 return;
                  }
                  else System.out.println("Please Enter Yes or NO")
-                        ;
+ /*__________________________________________________________________________________________________________________*/                       ;
         }
         public void WriteDepositTofile(){
                 
@@ -146,5 +146,27 @@ public class BankAccount {
                         }
                 
                 }
-
+        
+/*__________________________________________________________________________________________________________________*/
+        
+        public void ReadDepositToFile(){
+                
+                try{
+                        
+                        FileReader depositread = new FileReader("NewBalance.txt");
+                        BufferReader bf = new BufferReader(depositread);
+                        
+                        String str;
+                        while ((str = bf.readLine()) != null){
+                        System.out.println(str + "\n");
+                         }
+                        bf.close();
+                        
+                        
+                }catch(IOException){
+                        
+                        System.out.println("Error In attempt to read file");
+                }
+                
+        }
 }
