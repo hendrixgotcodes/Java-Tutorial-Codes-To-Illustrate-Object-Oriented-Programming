@@ -75,6 +75,14 @@ public class BankAccount {
             String smallletters = answer.toLowerCase();
 
                 if(smallletters.equals("yes")){
+                
+                System.out.println("This is your current account status");
+                
+                System.out.println("");
+                
+                ReadDepositFile();
+                        
+                        
                 System.out.println("Please How Much ?");
                 withdraw = scanner.nextDouble();
 
@@ -109,6 +117,14 @@ public class BankAccount {
                 String intake =answer.toLowerCase();
 
                 if ( intake.equals("yes")){
+                        
+                        System.out.println("This is your current account status");
+
+                        System.out.println("");
+
+                        ReadDepositFile();
+                                
+                
                     System.out.println("How much would You like To deposit please");
                     deposit = scanner.nextDouble();
 
